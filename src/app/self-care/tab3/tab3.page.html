@@ -1,0 +1,71 @@
+<ion-content>
+  <ion-row  class="ion-padding">
+    <ion-col size="4" class="ion-align-self-center">
+	   <ion-avatar> 
+         <img [src]="img">
+     </ion-avatar>
+   </ion-col>
+   <ion-col>
+	  <ion-text color="dark">
+			<h1>{{pic?.user_info.name}}</h1>
+			<h6>{{pic?.user_info.email}}</h6>
+	    <h6>ID : {{pic?.user_info.user_uid}}</h6>
+	  </ion-text>
+    <ion-icon name="create" size="large" (click)="edit()" class="ion-float-right"></ion-icon>
+  </ion-col>
+  
+  </ion-row>
+   <ion-list>
+    <ion-item>
+      <ion-row>
+        <ion-col>
+           <ion-label><b>Alert Tone</b></ion-label>
+            <span>set your tone for alert</span>
+        </ion-col>
+        <ion-col class="ion-float-right">
+           <p>alarm_bell_tones</p>
+        </ion-col>
+        
+       </ion-row>
+     </ion-item>
+ 
+     <ion-item >
+      <ion-row>
+        <ion-col>
+           <ion-label><b>Reminder Tone</b></ion-label>
+           <ion-label>set your tone for reminder</ion-label>
+        </ion-col>
+        <ion-col class="ion-float-right">
+           <p>alarm_bell_tones</p>
+        </ion-col>        
+       </ion-row>
+     </ion-item>
+
+      <ion-item (click)="careGiverName()">
+      <ion-row>
+        <ion-col>
+           <ion-label><b>Care Giver</b></ion-label>
+           <span>set your care giver for emergency</span>
+        </ion-col>
+        <ion-col class="ion-float-right">
+           <p>{{data1}}</p>
+        </ion-col>        
+       </ion-row>
+     </ion-item>
+    
+    
+       <ion-item (click)="medicineDuration()">
+      <ion-row>
+        <ion-col>
+           <ion-label><b>Medication Recorder Quantity</b></ion-label>
+           <span>set your medication recorder quantity</span>
+        </ion-col>
+        <ion-col class="ion-align-self-end">
+           <p>{{data}}</p>
+        </ion-col>
+      </ion-row>
+     </ion-item>
+       
+  </ion-list>
+
+</ion-content>

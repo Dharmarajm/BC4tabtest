@@ -1,0 +1,62 @@
+<ion-content>
+<form [formGroup]="detailForm" (ngSubmit) = "self_detail(detailForm.value)">
+	
+     <ion-item>
+      <ion-label position= "floating">{{'name' | translate}}</ion-label>
+	    <ion-input type= "text" formControlName="name"></ion-input>
+     </ion-item>
+    <ion-item>
+      <ion-label position= "floating">{{'email_id' | translate}}</ion-label>
+      <ion-input type= "email" formControlName="email"></ion-input>
+    </ion-item>
+    <p>{{'mail_hint' | translate}}</p>
+    <ion-item>
+      <ion-label position= "floating">{{'set_pwd' | translate}}</ion-label>
+      <ion-input type= "text" formControlName="password"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label position= "floating">{{'confirm_pwd' | translate}}</ion-label>
+      <ion-input type= "text" formControlName="password"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label position= "floating">{{'mob' | translate}}</ion-label>
+      <ion-input type= "text" formControlName="mobile_no"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position= "floating">{{'address' | translate}}</ion-label>
+      <ion-textarea type= "text" formControlName="address"></ion-textarea>
+    </ion-item>
+    <p>{{'address_hint' | translate}}</p>
+   <!--  <ion-item>
+      <ion-label position= "floating">Age</ion-label>
+      <ion-textarea type= "text" formControlName="age"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position= "floating">Blood Group</ion-label>
+      <ion-textarea type= "text" formControlName="blood_group"></ion-textarea>
+    </ion-item> -->
+    <ion-item>
+      <ion-label position= "floating">{{'country' | translate}}</ion-label>
+      <ion-input type= "text" formControlName="country"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position= "floating">{{'giver_name' | translate}}</ion-label>
+      <ion-input type= "text" formControlName="care_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position= "floating">{{'giver_no' | translate}}</ion-label>
+      <ion-input type= "text" formControlName="care_mobile"></ion-input>
+    </ion-item>
+     <b>{{'note' | translate}}</b>
+     <p>{{'giver_hint' | translate}}</p>
+    
+
+    <ion-checkbox></ion-checkbox>
+    <p>{{'agree' | translate}}<a>{{'terms' | translate}}</a></p>
+
+    <ion-item class="ion-float-right">
+      <ion-button type= "submit"  [disabled]="detailForm.invalid">{{'reg_now' | translate}}<ion-icon name="arrow-forward"></ion-icon></ion-button>
+    </ion-item>
+  
+</form>
+</ion-content>
